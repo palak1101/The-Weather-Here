@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+body {
+  background: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.patterns {
+  /* border: 2px solid black; */
+  height: 70px;
+  padding-top: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+svg text {
+ font-family: 'Russo One', sans-serif;
+ letter-spacing: 1px;
+ stroke: #fff;
+ font-size: 45px;
+ font-weight: 600;
+ stroke-width: 3;
+
+ animation: textAnimate 5s infinite alternate;
+ 
+}
+
+
+@keyframes textAnimate {
+ 0% {
+   stroke-dasharray: 0 50%;
+   stroke-dashoffset:  20%;
+   fill:hsl(190, 100%, 6%)
+
+ }
+ 
+
+ 100% {
+   stroke-dasharray: 50% 0;
+   stroke-dashoffstet: -20%;
+   fill: rgba(0, 6, 7, 0.8)
+ }
+ 
+}
+
+
+.container{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+div.main-card{
+  border-radius: 50%;
+}
+
+
+.back-card{
+  transform: scaleX(1.05);
+}
+
+
+/* .frosted{
+  background-color: rgba(255, 255, 255, 0.15);
+  background: inherit;
+  backdrop-filter: blur(10px);
+} */
+
+
+.w-icon{
+  transform: scale(3);
+}
+
+
+.temperature{
+  /* border: 2px solid green; */
+}
+
+
+.parameters{
+  /* border: 2px solid purple; */
+  margin: 20px 0px;
+  padding: 0px 10px;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: left;
+}
+
+
+.footerx{
+  background-color: #aaa9a9;
+  font-size: 1.2rem;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 2px 8px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+
+.name{
+  color: #4f4dde;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.footer-icons{
+  margin: 0px 10px;
+  color: #000;
 }
+
+
+.footer-icons:hover{
+  transform: scale(1.5);
+}
+
